@@ -11,6 +11,7 @@ define([
             uiHelper: null,
             nwHelper: null,
             serviceHelper: null,
+            cordova: null,
             device: null,
             navigator: null,
             language: (cookie("language") == null ? "E" : cookie("language"))

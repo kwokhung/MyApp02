@@ -28,6 +28,11 @@ define([
                 alert(title + "\n\n" + message);
             }
         },
+        natvieCall: function (service, operation, parameters, responseHandler, errorHandler) {
+            if (app.cordova != null) {
+                app.cordova.exec(responseHandler, errorHandler, service, operation, parameters);
+            }
+        },
         switchBundle: function (locale) {
             kernel.locale = locale;
 

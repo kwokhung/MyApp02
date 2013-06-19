@@ -5,11 +5,12 @@ var main = function () {
     ], function (ready, app) {
         ready(function () {
             if (typeof cordova != "undefined") {
-                cordova.exec(function (echoValue) {
+                /*cordova.exec(function (echoValue) {
                     alert(echoValue);
                 }, function (error) {
                     alert(error);
-                }, "Plugin01", "echo", ["Hello"]);
+                }, "Plugin01", "echo", ["Hello"]);*/
+                app.cordova = cordova;
             }
 
             if (typeof device != "undefined") {
@@ -19,6 +20,12 @@ var main = function () {
             if (typeof navigator != "undefined") {
                 app.navigator = navigator;
             }
+
+            app.generalHelper.natvieCall("Plugin01", "echo", ["Hi Hi"], function (echoValue) {
+                alert(echoValue);
+            }, function (error) {
+                alert(error);
+            });
 
             require([
                 "dojox/mobile/compat",
