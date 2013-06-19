@@ -1,7 +1,7 @@
 var profile = {
     basePath: "..",
-    releaseDir: "../..",
-    releaseName: "MyApp01-Release",
+    releaseDir: "../../..",
+    releaseName: "MyApp02-Release",
     action: "release",
     selectorEngine: "lite",
     stripConsole: "all",

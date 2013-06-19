@@ -2,13 +2,13 @@
 
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.mblinus.app01"
+        id        = "com.mblinus.app02"
         version   = "1.0.5">
 
-  <name>My App 01</name>
+  <name>My App 02</name>
 
   <description>
-    My Application 01.
+    My Application 02.
   </description>
 
   <author href="http://mblinus.com" email="support@mblinus.com">
