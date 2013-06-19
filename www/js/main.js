@@ -21,8 +21,8 @@ var main = function () {
                 app.navigator = navigator;
             }
 
-            app.generalHelper.natvieCall("Plugin01", "echo", ["Hi Hi"], function (echoValue) {
-                alert(echoValue);
+            app.generalHelper.natvieCall("Plugin01", "echo", ["Hi Hi"], function (response) {
+                alert(response);
             }, function (error) {
                 alert(error);
             });
