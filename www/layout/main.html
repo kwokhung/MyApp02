@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Main</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div id="home" data-dojo-type="dojox/mobile/View" selected="true">
+        <h1 data-dojo-type="dojox/mobile/Heading">Gauges Ver 1.0.5</h1>
+        <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Gauges Themes</h2>
+        <ul data-dojo-type="dojox/mobile/RoundRectList">
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="defaultGauges" transition="slide">Default Theme</li>
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="classicGauges" transition="slide">Classic Theme</li>
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="customSpinWheel" transition="slide">Custom SpinWheel</li>
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="phoneInformation" transition="slide">Phone Information</li>
+        </ul>
+    </div>
+    <div id="defaultGauges" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Default Theme</h1>
+        <br />
+        <div data-dojo-type="dojox/dgauges/components/default/CircularLinearGauge" interactionmode="touch" style="height: 200px"></div>
+        <br />
+        <div data-dojo-type="dojox/dgauges/components/default/HorizontalLinearGauge" interactionmode="touch" style="height: 50px;"></div>
+    </div>
+    <div id="classicGauges" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Classic Theme</h1>
+        <br />
+        <div data-dojo-type="dojox/dgauges/components/classic/CircularLinearGauge" interactionmode="touch" style="height: 200px"></div>
+        <br />
+        <div data-dojo-type="dojox/dgauges/components/classic/HorizontalLinearGauge" interactionmode="touch" style="height: 50px;"></div>
+    </div>
+    <div id="customSpinWheel" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Custom SpinWheel</h1>
+        <div id="spin1" data-dojo-type="dojox/mobile/SpinWheel">
+            <div data-dojo-type="dojox/mobile/SpinWheelSlot"
+                labels="A, B, C, D, E, F, G, H, I, J, K"
+                style="text-align: center; width: 40px;">
+            </div>
+            <div data-dojo-type="dojox/mobile/SpinWheelSlot"
+                labelfrom="3000" labelto="3100"
+                style="width: 70px;">
+            </div>
+            <div data-dojo-type="dojox/mobile/SpinWheelSlot"
+                labelfrom="0" labelto="9"
+                style="width: 30px;">
+            </div>
+            <div data-dojo-type="dojox/mobile/SpinWheelSlot"
+                labels="pt, px, cm"
+                style="width: 50px;">
+            </div>
+        </div>
+    </div>
+    <div id="phoneInformation" data-dojo-type="dojox/mobile/ScrollableView">
+        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Phone Information</h1>
+        <form>
+            <div data-dojo-type="dojox/mobile/RoundRect">
+                <div data-dojo-type="dojox/mobile/FormLayout">
+                    <div>
+                        <label>Platform</label>
+                        <fieldset>
+                            <input id="txtPlatform" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label>Version</label>
+                        <fieldset>
+                            <input id="txtVersion" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label>Connection</label>
+                        <fieldset>
+                            <input id="txtConnection" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label>Contact</label>
+                        <fieldset>
+                            <input id="txtName" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                        <fieldset>
+                            <input id="txtPhone" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label>Location</label>
+                        <fieldset>
+                            <input id="txtLatitude" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                        <fieldset>
+                            <input id="txtLongitude" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label>Accelerometer</label>
+                        <fieldset>
+                            <input id="txtX" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                        <fieldset>
+                            <input id="txtY" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                        <fieldset>
+                            <input id="txtZ" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
+                        </fieldset>
+                    </div>
+                    <div>
+                        <label>Image</label>
+                        <img id="imgPhoto" style="width: 100%;" src="#" alt="" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

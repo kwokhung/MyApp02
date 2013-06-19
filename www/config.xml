@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.mblinus.app01"
+        version   = "1.0.5">
+
+  <name>My App 01</name>
+
+  <description>
+    My Application 01.
+  </description>
+
+  <author href="http://mblinus.com" email="support@mblinus.com">
+    MBLinus
+  </author>
+
+  <feature name="http://api.phonegap.com/1.0/device" />
+  <feature name="http://api.phonegap.com/1.0/battery" />
+  <feature name="http://api.phonegap.com/1.0/camera" />
+  <feature name="http://api.phonegap.com/1.0/contacts" />
+  <feature name="http://api.phonegap.com/1.0/file" />
+  <feature name="http://api.phonegap.com/1.0/geolocation" />
+  <feature name="http://api.phonegap.com/1.0/media" />
+  <feature name="http://api.phonegap.com/1.0/network" />
+  <feature name="http://api.phonegap.com/1.0/notification" />
+  
+  <preference name="phonegap-version"           value="2.7.0" />
+  <preference name="orientation"                value="default" />
+  <preference name="target-device"              value="universal" />
+  <preference name="fullscreen"                 value="true" />
+  <preference name="webviewbounce"              value="true" />
+  <preference name="prerendered-icon"           value="true" />
+  <preference name="stay-in-webview"            value="false" />
+  <preference name="ios-statusbarstyle"         value="black-opaque" />
+  <preference name="detect-data-types"          value="true" />
+  <preference name="exit-on-suspend"            value="false" />
+  <preference name="show-splash-screen-spinner" value="true" />
+  <preference name="auto-hide-splash-screen"    value="true" />
+  <preference name="disable-cursor"             value="false" />
+  <preference name="android-minSdkVersion"      value="7" />
+  <preference name="android-installLocation"    value="auto" />
+
+  <access origin="*" />
+
+</widget>
