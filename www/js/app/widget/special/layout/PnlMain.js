@@ -16,18 +16,6 @@ define([
                     e.preventDefault();
                 }
 
-                app.serviceHelper.requestGetService(
-                    string.substitute("${serviceUrl}?service=${service}&languageDisplay=${languageDisplay}", {
-                        serviceUrl: "https://www.guococom.com/GuocoCommoditiesServer/serviceportal.aspx",
-                        service: "marketoutlook",
-                        languageDisplay: app.language
-                    }),
-                    null,
-                    function (response) {
-                        app.generalHelper.alert("analysis", response.analysis);
-                    }
-                );
-
                 if (app.device != null) {
                     on(document, "menubutton", function () {
                         app.generalHelper.alert("About", "This is My Application 01.");
@@ -83,19 +71,6 @@ define([
                             app.generalHelper.alert("Error getting acceleration.", "");
                         }, {
                             frequency: 1000
-                        });
-                    }
-
-                    if (typeof app.navigator.camera != "undefined") {
-                        app.navigator.camera.getPicture(function (imageData) {
-                            document.getElementById("imgPhoto").src = "data:image/jpeg;base64," + imageData;
-                        }, function (message) {
-                            app.generalHelper.alert("Error getting picture.", "Error Message: " + message);
-                        }, {
-                            quality: 50,
-                            destinationType: Camera.DestinationType.DATA_URL/*FILE_URI*//*NATIVE_URI*/,
-                            sourceType: Camera.PictureSourceType./*PHOTOLIBRARY*/CAMERA/*SAVEDPHOTOALBUM*/,
-                            encodingType: Camera.EncodingType.JPEG/*PNG*/
                         });
                     }
                 }

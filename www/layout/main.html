@@ -6,31 +6,25 @@
 </head>
 <body>
     <div id="home" data-dojo-type="dojox/mobile/View" selected="true">
-        <h1 data-dojo-type="dojox/mobile/Heading">Gauges Ver 1.0.5</h1>
-        <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Gauges Themes</h2>
+        <h1 data-dojo-type="dojox/mobile/Heading">My App 02 (Ver 1.0.5)</h1>
+        <h2 data-dojo-type="dojox/mobile/RoundRectCategory">Menu</h2>
         <ul data-dojo-type="dojox/mobile/RoundRectList">
-            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="defaultGauges" transition="slide">Default Theme</li>
-            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="classicGauges" transition="slide">Classic Theme</li>
-            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="customSpinWheel" transition="slide">Custom SpinWheel</li>
-            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="phoneInformation" transition="slide">Phone Information</li>
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="gauges" transition="slide">Gauges</li>
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="spinWheel" transition="fade">Spin Wheel</li>
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="phoneInformation" transition="flip">Phone Information</li>
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="image" transition="swirl">Image</li>
+            <li class="mblVariableHeight" data-dojo-type="dojox/mobile/ListItem" moveto="marketOutlook" transition="swap">Market Outlook</li>
         </ul>
     </div>
-    <div id="defaultGauges" data-dojo-type="dojox/mobile/View">
-        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Default Theme</h1>
+    <div id="gauges" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Gauges</h1>
         <br />
         <div data-dojo-type="dojox/dgauges/components/default/CircularLinearGauge" interactionmode="touch" style="height: 200px"></div>
         <br />
         <div data-dojo-type="dojox/dgauges/components/default/HorizontalLinearGauge" interactionmode="touch" style="height: 50px;"></div>
     </div>
-    <div id="classicGauges" data-dojo-type="dojox/mobile/View">
-        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Classic Theme</h1>
-        <br />
-        <div data-dojo-type="dojox/dgauges/components/classic/CircularLinearGauge" interactionmode="touch" style="height: 200px"></div>
-        <br />
-        <div data-dojo-type="dojox/dgauges/components/classic/HorizontalLinearGauge" interactionmode="touch" style="height: 50px;"></div>
-    </div>
-    <div id="customSpinWheel" data-dojo-type="dojox/mobile/View">
-        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Custom SpinWheel</h1>
+    <div id="spinWheel" data-dojo-type="dojox/mobile/View">
+        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">Spin Wheel</h1>
         <div id="spin1" data-dojo-type="dojox/mobile/SpinWheel">
             <div data-dojo-type="dojox/mobile/SpinWheelSlot"
                 labels="A, B, C, D, E, F, G, H, I, J, K"
@@ -103,9 +97,33 @@
                             <input id="txtZ" data-dojo-type="dojox/mobile/TextBox" value="undefined" disabled />
                         </fieldset>
                     </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="image" data-dojo-type="dojox/mobile/ScrollableView">
+        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">
+            <button class="mblRedButton" data-dojo-type="app/widget/BtnGetImage">Get Image</button></h1>
+        <form>
+            <div data-dojo-type="dojox/mobile/RoundRect">
+                <div data-dojo-type="dojox/mobile/FormLayout">
                     <div>
                         <label>Image</label>
                         <img id="imgPhoto" style="width: 100%;" src="#" alt="" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="marketOutlook" data-dojo-type="app/widget/special/home/ViewMarketOutlook">
+        <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#home">
+            <button class="mblRedButton" data-dojo-type="app/widget/BtnGetMarketOutlook">Refresh</button></h1>
+        <form>
+            <div data-dojo-type="dojox/mobile/RoundRect">
+                <div data-dojo-type="dojox/mobile/FormLayout">
+                    <div>
+                        <label>Analysis</label>
+                        <div id="blkMarketOutlook" style="width: 100%;"></div>
                     </div>
                 </div>
             </div>
