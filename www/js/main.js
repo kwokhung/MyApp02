@@ -17,7 +17,7 @@ var main = function () {
                 app.navigator = navigator;
             }
 
-            app.generalHelper.natvieCall("Plugin01", "echo", ["Check if bluetooth is enabled."], function (response) {
+            /*app.generalHelper.natvieCall("Plugin01", "echo", ["Check if bluetooth is enabled."], function (response) {
                 app.generalHelper.alert("Response", response);
             }, function (error) {
                 app.generalHelper.alert("Error", error);
@@ -40,15 +40,11 @@ var main = function () {
                 });
             }, function (error) {
                 app.generalHelper.alert("Error", error);
-            });
+            });*/
 
             require([
                 "dojox/mobile/compat",
                 "dojox/mobile/deviceTheme",
-                /*"dojox/dgauges/components/default/CircularLinearGauge",
-                "dojox/dgauges/components/default/HorizontalLinearGauge",
-                "dojox/dgauges/components/classic/CircularLinearGauge",
-                "dojox/dgauges/components/classic/HorizontalLinearGauge",*/
                 "app/widget/special/layout/PnlMain"
             ]);
 
