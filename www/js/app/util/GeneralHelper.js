@@ -17,7 +17,7 @@ define([
         },
         alert: function (title, message) {
             if (app.navigator != null) {
-                if (typeof app.navigator.notification != "undefined") {
+                if (typeof app.navigator.notification != "undefined" && false) {
                     app.navigator.notification.alert(message, null, title, "OK");
                 }
                 else {

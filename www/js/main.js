@@ -1,15 +1,11 @@
 var main = function () {
     require([
         "dojo/ready",
+        "dojo/json",
         "app/util/app"
-    ], function (ready, app) {
+    ], function (ready, json, app) {
         ready(function () {
             if (typeof cordova != "undefined") {
-                /*cordova.exec(function (echoValue) {
-                    alert(echoValue);
-                }, function (error) {
-                    alert(error);
-                }, "Plugin01", "echo", ["Hello"]);*/
                 app.cordova = cordova;
             }
 
@@ -21,19 +17,38 @@ var main = function () {
                 app.navigator = navigator;
             }
 
-            app.generalHelper.natvieCall("Plugin01", "echo", ["Hi Hi"], function (response) {
-                alert(response);
+            app.generalHelper.natvieCall("Plugin01", "echo", ["Check if bluetooth is enabled."], function (response) {
+                app.generalHelper.alert("Response", response);
             }, function (error) {
-                alert(error);
+                app.generalHelper.alert("Error", error);
+            });
+
+            app.generalHelper.natvieCall("BluetoothSerial", "isEnabled", [], function (response) {
+                app.generalHelper.alert("Response", response);
+                app.generalHelper.natvieCall("BluetoothSerial", "list", [], function (response) {
+                    response.forEach(function (device) {
+                        app.generalHelper.alert("Paired Device Name", device.name);
+                        app.generalHelper.alert("Paired Device Address", device.address);
+                        app.generalHelper.natvieCall("BluetoothSerial", "connect", [device.address], function (response) {
+                            app.generalHelper.alert("Response", response);
+                        }, function (error) {
+                            app.generalHelper.alert("Error (" + device.address + ")", error);
+                        });
+                    });
+                }, function (error) {
+                    app.generalHelper.alert("Error", json.stringify(error));
+                });
+            }, function (error) {
+                app.generalHelper.alert("Error", error);
             });
 
             require([
                 "dojox/mobile/compat",
                 "dojox/mobile/deviceTheme",
-                "dojox/dgauges/components/default/CircularLinearGauge",
+                /*"dojox/dgauges/components/default/CircularLinearGauge",
                 "dojox/dgauges/components/default/HorizontalLinearGauge",
                 "dojox/dgauges/components/classic/CircularLinearGauge",
-                "dojox/dgauges/components/classic/HorizontalLinearGauge",
+                "dojox/dgauges/components/classic/HorizontalLinearGauge",*/
                 "app/widget/special/layout/PnlMain"
             ]);
 
