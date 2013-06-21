@@ -19,6 +19,10 @@ define([
                 on(document, "menubutton", function () {
                     registry.byId("viewPhoneInformation").show();
                 });
+
+                on(document, "backbutton", function () {
+                    registry.byId("viewHome").show();
+                });
             }));
         }
     });
