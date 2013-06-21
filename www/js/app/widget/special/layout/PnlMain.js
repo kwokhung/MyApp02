@@ -18,6 +18,7 @@ define([
 
                 on(document, "menubutton", function () {
                     app.generalHelper.alert("About", "This is My Application 01.");
+                    registry.byId("viewPhoneInformation").show();
                 });
             }));
         }
