@@ -16,11 +16,11 @@ define([
                     e.preventDefault();
                 }
 
-                if (app.device != null) {
-                    on(document, "menubutton", function () {
-                        app.generalHelper.alert("About", "This is My Application 01.");
-                    });
+                on(document, "menubutton", function () {
+                    app.generalHelper.alert("About", "This is My Application 01.");
+                });
 
+                if (app.device != null) {
                     registry.byId("txtPlatform").set("value", app.device.platform);
                     registry.byId("txtVersion").set("value", app.device.version);
                 }
