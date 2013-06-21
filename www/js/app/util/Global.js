@@ -14,6 +14,8 @@ define([
             cordova: null,
             device: null,
             navigator: null,
+            currentViewId: "",
+            previousViewId: "",
             language: (cookie("language") == null ? "E" : cookie("language"))
         }
     });
