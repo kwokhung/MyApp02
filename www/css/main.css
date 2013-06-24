@@ -6,3 +6,7 @@
     font-variant: normal;
     font-style: normal;
 }
+
+    *:focus {
+        outline: none;
+    }
