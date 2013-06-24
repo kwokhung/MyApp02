@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Android Test Select</title>
+    <base href="" />
+    <style>
+        .no-hi {
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="radio" name="highlight" value="these" />
+        These<br />
+        <input type="radio" name="highlight" value="should" />
+        Should<br />
+        <input type="radio" name="highlight" value="highlight" />
+        Highlight  
+            <hr />
+        <input type="radio" name="no-highlight" value="these" class="no-hi" />
+        These<br />
+        <input type="radio" name="no-highlight" value="should" class="no-hi" />
+        Should<br />
+        <input type="radio" name="no-highlight" value="not" class="no-hi" />
+        Not  
+    </form>
+</body>
+</html>
