@@ -8,6 +8,6 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
 
-    *:focus {
-        outline: none;
-    }
+* {
+    outline: none;
+}
