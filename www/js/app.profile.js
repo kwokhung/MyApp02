@@ -50,6 +50,7 @@ var profile = {
                 "dojox/mobile/ContentPane",
                 "dojox/mobile/View",
                 "dojox/mobile/ScrollableView",
+                "dojox/mobile/SwapView",
                 "dojox/mobile/Heading",
                 "dojox/mobile/RoundRectCategory",
                 "dojox/mobile/RoundRectList",
