@@ -5,8 +5,13 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 </head>
 <body>
-    <h1 data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#viewHome">
-        <button class="mblRedButton" data-dojo-type="app/widget/BtnGetMarketOutlook">Refresh</button></h1>
+    <div data-dojo-type="dojox/mobile/Heading" back="Back" moveto="#viewHome">
+        <ul data-dojo-type="dojox/mobile/TabBar">
+            <li data-dojo-type="dojox/mobile/TabBarButton" data-dojo-props="selected:true">New</li>
+            <li data-dojo-type="dojox/mobile/TabBarButton">What's Hot</li>
+            <li data-dojo-type="dojox/mobile/TabBarButton">Genius</li>
+        </ul>
+    </div>
     <form>
         <div data-dojo-type="dojox/mobile/RoundRect">
             <div data-dojo-type="dojox/mobile/FormLayout">
@@ -16,6 +21,7 @@
                 </div>
             </div>
         </div>
+        <button class="mblRedButton" data-dojo-type="app/widget/BtnGetMarketOutlook">Refresh</button>
     </form>
 </body>
 </html>
