@@ -62,6 +62,8 @@ var profile = {
                 "dojox/mobile/SimpleDialog",
                 "dojox/mobile/ProgressIndicator",
                 "dojox/mobile/Button",
+                "dojox/mobile/TabBar",
+                "dojox/mobile/TabBarButton",
                 "dojox/dgauges/components/default/CircularLinearGauge",
                 "dojox/dgauges/components/default/HorizontalLinearGauge",
                 "dojox/dgauges/components/classic/CircularLinearGauge",
