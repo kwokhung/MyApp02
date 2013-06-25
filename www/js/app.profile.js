@@ -64,6 +64,7 @@ var profile = {
                 "dojox/mobile/Button",
                 "dojox/mobile/TabBar",
                 "dojox/mobile/TabBarButton",
+                "dojox/mobile/PageIndicator",
                 "dojox/dgauges/components/default/CircularLinearGauge",
                 "dojox/dgauges/components/default/HorizontalLinearGauge",
                 "dojox/dgauges/components/classic/CircularLinearGauge",
