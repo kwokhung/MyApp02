@@ -12,7 +12,7 @@ define([
             this.inherited(arguments);
 
             if (this.viewId != null) {
-                this.switchToViewOnClick(this.viewId);
+                this.switchToViewOnClickAsUsual(this.viewId);
             }
         }
     });

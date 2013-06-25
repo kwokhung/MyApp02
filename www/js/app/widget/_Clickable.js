@@ -13,6 +13,11 @@ define([
 
                 registry.byId(viewId).show();
             }));
+        },
+        switchToViewOnClickAsUsual: function (viewId) {
+            on(this, "click", lang.hitch(this, function (e) {
+                registry.byId(viewId).show();
+            }));
         }
     });
 });
