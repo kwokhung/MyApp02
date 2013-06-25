@@ -3,10 +3,10 @@ define([
     "dojo/_base/lang",
     "dojo/on",
     "dijit/registry",
-    "dojox/mobile/Button",
+    "dojox/mobile/TabBarButton",
     "app/widget/_Clickable"
-], function (declare, lang, on, registry, Button, _Clickable) {
-    return declare("app.widget.BtnSwitchView", [Button, _Clickable], {
+], function (declare, lang, on, registry, TabBarButton, _Clickable) {
+    return declare("app.widget.TbbSwitchView", [TabBarButton, _Clickable], {
         viewId: null,
         postCreate: function () {
             this.inherited(arguments);
