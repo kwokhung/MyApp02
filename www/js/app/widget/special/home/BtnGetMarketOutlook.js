@@ -6,7 +6,7 @@ define([
     "dojox/mobile/Button",
     "app/util/app"
 ], function (declare, lang, on, string, Button, app) {
-    return declare("app.widget.BtnGetMarketOutlook", [Button], {
+    return declare("app.widget.special.home.BtnGetMarketOutlook", [Button], {
         postCreate: function () {
             this.inherited(arguments);
 
