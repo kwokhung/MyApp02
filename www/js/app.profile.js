@@ -48,6 +48,7 @@ var profile = {
                 "dojox/mobile/compat",
                 "dojox/mobile/deviceTheme",
                 "dojox/mobile/ContentPane",
+                "dojox/mobile/ScrollablePane",
                 "dojox/mobile/View",
                 "dojox/mobile/ScrollableView",
                 "dojox/mobile/SwapView",
