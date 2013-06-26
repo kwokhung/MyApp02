@@ -30,8 +30,7 @@ define([
                         e.preventDefault();
                     }
 
-                    //registry.byId("viewPhoneInformation").show();
-                    registry.byId("ovlTest").show();
+                    registry.byId("viewPhoneInformation").show();
                 });
 
                 on(document, "backbutton", function (e) {
