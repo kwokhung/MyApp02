@@ -17,7 +17,7 @@ define([
 
                 app.serviceHelper.requestGetService(
                     string.substitute("${serviceUrl}?service=${service}&languageDisplay=${languageDisplay}", {
-                        serviceUrl: "https://www.guococom.com/GuocoCommoditiesServer/serviceportal.aspx",
+                        serviceUrl: "http://test04atmblinus.azurewebsites.net/test03",
                         service: "marketoutlook",
                         languageDisplay: app.language
                     }),

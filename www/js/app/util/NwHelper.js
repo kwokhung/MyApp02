@@ -106,17 +106,26 @@ define([
             if (serviceUrl.substring(0, 4) == "http" && this.isCrossDomain(serviceUrl)) {
                 if (request.method == null || request.method == "GET") {
                     if (this.isDifferentHost(serviceUrl)/* || true*/) {
-                        return windowName.send("GET", {
-                            url: serviceUrl,
-                            preventCache: true,
-                            timeout: request.timeout
-                        }).addBoth(request.handle);
+                        if (this.parseUrl(serviceUrl).hostName == "www.guococom.com") {
+                            return windowName.send("GET", {
+                                url: serviceUrl,
+                                preventCache: true,
+                                timeout: request.timeout
+                            }).addBoth(request.handle);
+                        }
+                        else {
+                            return script.get(serviceUrl, {
+                                preventCache: true,
+                                timeout: request.timeout,
+                                jsonp: "callback"
+                            }).then(request.handle);
+                        }
                     }
                     else {
                         return script.get(serviceUrl, {
                             preventCache: true,
                             timeout: request.timeout,
-                            jsonp: "jsonp"
+                            jsonp: "callback"
                         }).then(request.handle);
                         /*return iframe.get(serviceUrl, {
                         query: { "iframe":"true" },
@@ -127,19 +136,29 @@ define([
                     }
                 } else {
                     if (this.isDifferentHost(serviceUrl)/* || true*/) {
-                        return windowName.send("POST", {
-                            url: serviceUrl,
-                            preventCache: true,
-                            timeout: request.timeout,
-                            form: request.form,
-                            content: request.content
-                        }).addBoth(request.handle);
+                        if (this.parseUrl(serviceUrl).hostName == "www.guococom.com") {
+                            return windowName.send("POST", {
+                                url: serviceUrl,
+                                preventCache: true,
+                                timeout: request.timeout,
+                                form: request.form,
+                                content: request.content
+                            }).addBoth(request.handle);
+                        }
+                        else {
+                            return script.get(serviceUrl, {
+                                preventCache: true,
+                                timeout: request.timeout,
+                                jsonp: "callback",
+                                query: request.content
+                            }).then(request.handle);
+                        }
                     }
                     else {
                         return script.get(serviceUrl, {
                             preventCache: true,
                             timeout: request.timeout,
-                            jsonp: "jsonp",
+                            jsonp: "callback",
                             query: request.content
                         }).then(request.handle);
                         /*return iframe.post(serviceUrl, {
