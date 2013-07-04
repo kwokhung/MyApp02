@@ -59,12 +59,6 @@ define([
 
                     function message(from, msg) {
                         console.debug(from + ": " + msg);
-                        /*array.forEach(itemStore.query({}), function (item, index) {
-                            itemStore.remove(item.id);
-                        });
-                        array.forEach(response.content.data, function (item, index) {
-                            itemStore.put(item);
-                        });*/
                         itemStore.put({ "id": itemData.length + 1, "label": from, "rightText": msg });
                     }
                 });
