@@ -9,7 +9,7 @@ define([
 ], function (declare, array, string, Memory, Observable, RoundRectStoreList, app) {
     return declare("app.widget.special.home.ListPressRelease", [RoundRectStoreList], {
         resourceUrl: null,
-        storeLabel: "Settings",
+        storeLabel: "Press Release",
         storeIdentifier: "id",
         postCreate: function () {
             this.inherited(arguments);
