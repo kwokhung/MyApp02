@@ -4,12 +4,10 @@ var dojoConfig = {
     parseOnLoad: false,
     async: true,
     hashPollFrequency: 100,
-    packages: [
-        {
-            "name": "app",
-            "location": "../app"
-        }
-    ],
+    packages: [{
+        "name": "app",
+        "location": "../app"
+    }],
     locale: (location.search.match(/locale=([\w\-]+)/) ? RegExp.$1 : "en"),
     extraLocale: [
         "en",

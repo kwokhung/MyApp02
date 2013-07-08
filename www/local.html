@@ -18,24 +18,19 @@
             parseOnLoad: false,
             async: true,
             hashPollFrequency: 100,
-            packages: [
-                {
-                    "name": "dojo",
-                    "location": "http://172.21.72.71:9080/javascript/js/dojo/dojo-release-1.9.0-src/dojo"
-                },
-                {
-                    "name": "dojox",
-                    "location": "http://172.21.72.71:9080/javascript/js/dojo/dojo-release-1.9.0-src/dojox"
-                },
-                {
-                    "name": "dijit",
-                    "location": "http://172.21.72.71:9080/javascript/js/dojo/dojo-release-1.9.0-src/dijit"
-                },
-                {
-                    "name": "app",
-                    "location": "js/app"
-                }
-            ],
+            packages: [{
+                "name": "dojo",
+                "location": "http://172.21.72.71:9080/javascript/js/dojo/dojo-release-1.9.0-src/dojo"
+            }, {
+                "name": "dojox",
+                "location": "http://172.21.72.71:9080/javascript/js/dojo/dojo-release-1.9.0-src/dojox"
+            }, {
+                "name": "dijit",
+                "location": "http://172.21.72.71:9080/javascript/js/dojo/dojo-release-1.9.0-src/dijit"
+            }, {
+                "name": "app",
+                "location": "js/app"
+            }],
             locale: (location.search.match(/locale=([\w\-]+)/) ? RegExp.$1 : "en"),
             extraLocale: [
                 "en",
