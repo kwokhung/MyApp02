@@ -1,12 +1,13 @@
 define([
     "dojo/_base/declare",
+    "dojo/_base/lang",
     "dojo/_base/array",
     "dojo/string",
     "dojo/store/Memory",
     "dojo/store/Observable",
     "dojox/mobile/RoundRectStoreList",
     "app/util/app"
-], function (declare, array, string, Memory, Observable, RoundRectStoreList, app) {
+], function (declare, lang, array, string, Memory, Observable, RoundRectStoreList, app) {
     return declare("app.widget.special.home.ListChatMessage", [RoundRectStoreList], {
         resourceUrl: null,
         storeLabel: "Chat Message",
@@ -26,7 +27,12 @@ define([
 
                 this.setStore(itemStore);
 
-                var socket = io.connect(this.resourceUrl);
+                var message = lang.hitch(this, function message(from, msg) {
+                    console.debug(from + ": " + msg);
+                    itemStore.put({ "id": this.id + "_" + (itemData.length + 1), "label": from, "rightText": msg });
+                });
+
+                var socket = io.connect(this.resourceUrl, { "force new connection": false });
 
                 socket.on("connect", function () {
                     message("connect", "Connected");
@@ -56,11 +62,6 @@ define([
                     socket.on("disconnect", function () {
                         message("disconnect", "Disconnected");
                     });
-
-                    function message(from, msg) {
-                        console.debug(from + ": " + msg);
-                        itemStore.put({ "id": itemData.length + 1, "label": from, "rightText": msg });
-                    }
                 });
             }
         }
