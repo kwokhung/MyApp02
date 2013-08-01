@@ -1,0 +1,1 @@
+copy C:\Projects\MyApp16\platforms\android\bin\MyApp16.apk .\MyApp.apk /Y
