@@ -45,12 +45,15 @@ define([
 	                        item.variableHeight = true;
 	                        itemStore.put(item);
 
-	                        on(registry.byId(this.id + "_" + item.id), "click", lang.hitch(this, function (e) {
+	                        console.debug(item.id);
+	                        console.debug(registry.byId(item.id));
+	                        on(registry.byId(item.id), "click", lang.hitch(this, function (e) {
+	                            alert("Here");
 	                            if (e != null) {
 	                                e.preventDefault();
 	                            }
 
-	                            alert("Here");
+	                            alert("there");
 	                        }));
 	                    }));
 	                })
