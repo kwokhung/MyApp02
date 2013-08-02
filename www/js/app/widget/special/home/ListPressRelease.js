@@ -2,12 +2,14 @@ define([
     "dojo/_base/declare",
     "dojo/_base/lang",
     "dojo/_base/array",
+    "dojo/on",
     "dojo/string",
     "dojo/store/Memory",
     "dojo/store/Observable",
     "dojox/mobile/RoundRectStoreList",
+    "dijit/registry",
     "app/util/app"
-], function (declare, lang, array, string, Memory, Observable, RoundRectStoreList, app) {
+], function (declare, lang, array, on, string, Memory, Observable, RoundRectStoreList, registry, app) {
     return declare("app.widget.special.home.ListPressRelease", [RoundRectStoreList], {
         resourceUrl: null,
         storeLabel: "Press Release",
@@ -42,6 +44,14 @@ define([
 	                        item.id = this.id + "_" + item.id;
 	                        item.variableHeight = true;
 	                        itemStore.put(item);
+
+	                        on(registry.byId(this.id + "_" + item.id), "click", lang.hitch(this, function (e) {
+	                            if (e != null) {
+	                                e.preventDefault();
+	                            }
+
+	                            alert("Here");
+	                        }));
 	                    }));
 	                })
                 );
