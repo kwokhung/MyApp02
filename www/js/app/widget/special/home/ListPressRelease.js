@@ -40,6 +40,7 @@ define([
 	                    });
 	                    array.forEach(response.content.data, lang.hitch(this, function (item, index) {
 	                        item.id = this.id + "_" + item.id;
+	                        item.variableHeight = true;
 	                        itemStore.put(item);
 	                    }));
 	                })
