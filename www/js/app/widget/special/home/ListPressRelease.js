@@ -43,17 +43,13 @@ define([
 	                    array.forEach(response.content.data, lang.hitch(this, function (item, index) {
 	                        item.id = this.id + "_" + item.id;
 	                        item.variableHeight = true;
+	                        item.anchorLabel = true;
 	                        itemStore.put(item);
 
-	                        console.debug(item.id);
-	                        console.debug(registry.byId(item.id));
-	                        on(registry.byId(item.id), "click", lang.hitch(this, function (e) {
-	                            alert("Here");
+	                        on(registry.byId(item.id), "anchorLabelClicked", lang.hitch(this, function (e) {
 	                            if (e != null) {
 	                                e.preventDefault();
 	                            }
-
-	                            alert("there");
 	                        }));
 	                    }));
 	                })
