@@ -1,1 +1,1 @@
-D:\dojo\dojo-release-1.9.0-src\util\buildscripts\build.bat profile=app.profile.js
+D:\dojo\dojo-release-1.9.1-src\util\buildscripts\build.bat profile=app.profile.js

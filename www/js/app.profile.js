@@ -71,6 +71,7 @@ var profile = {
                 "dojox/mobile/PageIndicator",
                 "dojox/mobile/Overlay",
                 "dojox/mobile/RoundRectStoreList",
+				"dojox/mobile/GridLayout",
                 "dojox/dgauges/components/default/CircularLinearGauge",
                 "dojox/dgauges/components/default/HorizontalLinearGauge",
                 "dojox/dgauges/components/classic/CircularLinearGauge",
@@ -94,15 +95,15 @@ var profile = {
     packages: [
         {
             name: "dojo",
-            location: "D:/dojo/dojo-release-1.9.0-src/dojo"
+            location: "D:/dojo/dojo-release-1.9.1-src/dojo"
         },
         {
             name: "dijit",
-            location: "D:/dojo/dojo-release-1.9.0-src/dijit"
+            location: "D:/dojo/dojo-release-1.9.1-src/dijit"
         },
         {
             name: "dojox",
-            location: "D:/dojo/dojo-release-1.9.0-src/dojox"
+            location: "D:/dojo/dojo-release-1.9.1-src/dojox"
         }/*,
         {
             name: "app",
