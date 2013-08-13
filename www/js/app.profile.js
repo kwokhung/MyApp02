@@ -75,6 +75,8 @@ var profile = {
 				"dojox/mobile/IconContainer",
 				"dojox/mobile/IconItem",
 				"dojox/mobile/Badge",
+				"dojox/mobile/IconMenu",
+				"dojox/mobile/IconMenuItem",
                 "dojox/dgauges/components/default/CircularLinearGauge",
                 "dojox/dgauges/components/default/HorizontalLinearGauge",
                 "dojox/dgauges/components/classic/CircularLinearGauge",
