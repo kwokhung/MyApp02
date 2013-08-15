@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>My App Download</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <script>
+        function download1() {
+            window.open("MyApp.apk", "Download", "location=no");
+        }
+
+        function download2() {
+            parent.location.href = "MyApp.apk";
+        }
+    </script>
+</head>
+<body>
+    <h1>My App Download</h1>
+    <a target="_blank" href="MyApp.apk">Click to download</a>
+    <br />
+    <br />
+    <br />
+    <a href="#" onclick="download1()">Click to download</a>
+    <br />
+    <br />
+    <br />
+    <a href="#" onclick="download2()">Click to download</a>
+</body>
+</html>
